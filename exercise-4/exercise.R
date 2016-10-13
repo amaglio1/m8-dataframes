@@ -1,29 +1,31 @@
 # Exercise 4: Working with Data Frames
 
 # Load R's "USPersonalExpenditure" dataest using the `data()` function
-
+data("USPersonalExpenditure")
+my.data <- USPersonalExpenditure
 
 # The variable USPersonalExpenditure is now accessible to you. Unfortunately, it's not a data.frame
 # Test this using the is.data.frame function
-
+is.data.frame(my.data)
 
 # Luckily, you can simply pass the USPersonalExpenditure variable to the data.frame function
 # to convert it a data.farme
+my.data <- data.frame("USPersonalExpenditure")
 
 # Create a new variable by passing the USPersonalExpenditure to the data.frame function
 
 
 # What are the column names of your dataframe?
-
+colnames(my.data)
 
 # Why are they so strange?
 
 
 # What are the row names of your dataframe?
-
+rownames(my.data)
 
 # Create a column `category` that is equal to your rownames
-
+my.data$category <- rownames(my.data)
 
 # How much money was spent on personal care in 1940?
 
